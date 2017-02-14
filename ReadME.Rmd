@@ -1,0 +1,19 @@
+---
+title: "ReadME"
+author: "JP Kuijper"
+date: "February 14, 2017"
+output: html_document
+---
+
+# ReadME file Run_analysis.R
+
+## Files
+**Run_analysis.R** 
+An R script that downloads and creates a tidy data set based on the criteria as explained in the Codebook.
+
+**Codebook.MD**
+a Markdown file that explains the project, its purpose and further background information.
+
+**UCIGroup.txt**
+The final data set created by Run_Analysis.R exported as a text file. 
+

@@ -1,0 +1,80 @@
+---
+title: "Codebook"
+author: "JP Kuijper"
+date: "February 14, 2017"
+output:
+   html_document: default
+---
+
+# Codebook Run_Analysis.R
+
+For the **John Hopkins University** Course **Getting and Cleaning Data** on **Coursera**, Samsung motion data from smart phones is used from the website: 
+[The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
+In this project the purpose is to download the dataset and to create a tidy data set using the following steps.
+
+## 5 steps for creating tidy data set.
+
+**1.** Merge the training and the test sets to create one data set.
+**2.** Extract only the measurements on the mean and standard deviation for each measurement.
+**3.** Use descriptive activity names to name the activities in the data set.
+**4.** Appropriately label the data set with descriptive variable names.
+**5.** From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+# Tidy data set variables
+
+The next paragraph describes the variables from the final dataset. Note that according to the steps explained above, the variables are all mean measures from all the different measurements (means and standard deviations) that were included for each of the participants and each of their Activities (further explained below).
+
+## Identifiers
+
+**1.** ID: experiment subject numbers ranging from 1 - 30.
+**2.** Activity: one of the 6 activities from Walking, Walking up stairs, Walking down stairs, Sitting, Standing, Laying.
+
+## Measurements
+
+**1.** tBodyAcc-XYZ
+**2.** tGravityAcc-XYZ
+**3.** tBodyAccJerk-XYZ
+**4.**tBodyGyro-XYZ
+**5.**tBodyGyroJerk-XYZ
+**6.**tBodyAccMag
+**7.**tGravityAccMag
+**8.**tBodyAccJerkMag
+**9.**tBodyGyroMag
+**10.**tBodyGyroJerkMag
+**11.**fBodyAcc-XYZ
+**12.**fBodyAccJerk-XYZ
+**13.**fBodyGyro-XYZ
+**14.**fBodyAccMag
+**15.**fBodyAccJerkMag
+**16.**fBodyGyroMag
+**17.**fBodyGyroJerkMag 
+
+**For each measurement a mean and a standard deviation is included**
+
+# Feature Selection 
+
+The units and measurements are explained the in following paragraph.
+
+**As written in the file features_info.txt from the original data set**:
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+# Original files
+
+In this paragraph the original data files are mentioned, that were used in creating the final tidy data set. 
+
+**1.** Features.txt - Names of the columns in the X data sets
+**2.** Activity_labels.txt - Names of the activities in the Y data sets
+**3.** X_test.txt - Measurements of the test group
+**4.** y_test.txt - Activities of the test group
+**5.** Subject_test.txt - Participant numbers of the test group
+**6.** X_train.txt - Measurements of the train group
+**7.** y_train.txt - Activities of the train group
+**8.** Subject_train.txt - Participant numbers of the train group
